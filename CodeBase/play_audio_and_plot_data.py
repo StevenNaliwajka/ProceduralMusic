@@ -33,6 +33,7 @@ ax.set_ylabel("Amplitude")
 # Shared buffer for audio chunks
 audio_chunk = np.zeros(chunk_size)
 
+
 # Audio callback function
 def audio_callback(outdata, frames, time, status):
     global audio_chunk
@@ -48,7 +49,9 @@ def audio_callback(outdata, frames, time, status):
     audio_chunk = data[start_index:end_index]  # Update shared chunk for FFT
     audio_callback.counter += 1
 
+
 audio_callback.counter = 0  # Initialize playback frame counter
+
 
 # Update function for the plot
 def update(frame):
@@ -63,6 +66,7 @@ def update(frame):
     # Update the line plot
     line.set_ydata(magnitude)
     return line,
+
 
 # Set up the audio stream
 with sd.OutputStream(callback=audio_callback, samplerate=sample_rate, channels=1, blocksize=chunk_size):
