@@ -1,4 +1,6 @@
 # ProceduralMusic (IN PROG)
+
+
 The end goal is procedural music generation. That is a LONG way off however, you have to start somewhere.
 
 This project has been rolling around in my head for a while now but only in theory. 

@@ -5,7 +5,9 @@ import sounddevice as sd
 from scipy.io import wavfile
 
 # Load the .wav file
-sample_rate, data = wavfile.read('Chikoi_The_Maid_song.wav')
+#file = 'Chikoi_The_Maid_song.wav'
+file = 'sine_wave_440Hz.wav'
+sample_rate, data = wavfile.read(file)
 
 # Convert stereo to mono if necessary
 if len(data.shape) > 1:

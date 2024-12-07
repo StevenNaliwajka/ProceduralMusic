@@ -1,6 +1,6 @@
-
 import sys
 import select
+
 
 def user_input_stop_flag_check(stop_flag):
     while not stop_flag.is_set():

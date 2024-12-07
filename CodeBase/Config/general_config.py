@@ -9,7 +9,8 @@ class GeneralConfig:
         music_samples_directory = self.build_music_samples_directory()
 
         self.song_file_directory = music_samples_directory
-        self.song_file_name = "Chikoi_The_Maid_song.wav"
+        self.song_file_name = 'sine_wave_440Hz.wav'
+        # self.song_file_name = "Chikoi_The_Maid_song.wav"
         self.song_file_path = os.path.join(self.song_file_directory, self.song_file_name)
 
         # (HZ) Standard for audio, the number of samples that is taken per second
@@ -40,6 +41,8 @@ class GeneralConfig:
         self.magnitude_threshold = 0.001
 
         self.channel_count = None
+
+
 
     def set_sample_rate(self, sample_rate):
         if sample_rate is None:
